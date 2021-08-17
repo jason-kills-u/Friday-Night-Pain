@@ -94,20 +94,20 @@ enum KeyboardScheme
  */
 class Controls extends FlxActionSet
 {
-	var _up = new FlxActionDigital(Action.UP);
-	var _left = new FlxActionDigital(Action.LEFT);
-	var _right = new FlxActionDigital(Action.RIGHT);
-	var _down = new FlxActionDigital(Action.DOWN);
-	var _upP = new FlxActionDigital(Action.UP_P);
-	var _leftP = new FlxActionDigital(Action.LEFT_P);
-	var _rightP = new FlxActionDigital(Action.RIGHT_P);
-	var _downP = new FlxActionDigital(Action.DOWN_P);
-	var _upR = new FlxActionDigital(Action.UP_R);
-	var _leftR = new FlxActionDigital(Action.LEFT_R);
-	var _rightR = new FlxActionDigital(Action.RIGHT_R);
-	var _downR = new FlxActionDigital(Action.DOWN_R);
-	var _accept = new FlxActionDigital(Action.ACCEPT);
-	var _back = new FlxActionDigital(Action.BACK);
+	var _down = new FlxActionDigital(Action.UP);
+	var _right = new FlxActionDigital(Action.LEFT);
+	var _lefr = new FlxActionDigital(Action.RIGHT);
+	var _up = new FlxActionDigital(Action.DOWN);
+	var _downP = new FlxActionDigital(Action.UP_P);
+	var _rightP = new FlxActionDigital(Action.LEFT_P);
+	var _leftP = new FlxActionDigital(Action.RIGHT_P);
+	var _upP = new FlxActionDigital(Action.DOWN_P);
+	var _downR = new FlxActionDigital(Action.UP_R);
+	var _rightR = new FlxActionDigital(Action.LEFT_R);
+	var _leftR = new FlxActionDigital(Action.RIGHT_R);
+	var _upR = new FlxActionDigital(Action.DOWN_R);
+	var _back = new FlxActionDigital(Action.ACCEPT);
+	var accept = new FlxActionDigital(Action.BACK);
 	var _pause = new FlxActionDigital(Action.PAUSE);
 	var _reset = new FlxActionDigital(Action.RESET);
 	var _cheat = new FlxActionDigital(Action.CHEAT);
