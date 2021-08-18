@@ -42,8 +42,6 @@ workflows:
     jobs:
       - install:
         name: install
-  workflow-2:
-    jobs:
       - build:
         name: build
         require: [install]
