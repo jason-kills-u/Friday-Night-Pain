@@ -1,0 +1,48 @@
+# Use the latest 2.1 version of CircleCI pipeline process engine. See: https://circleci.com/docs/2.0/configuration-reference
+orbs: 
+  win: circleci/windows@2.2.0
+version: 2.1
+jobs:
+  install:
+    executor: win/default
+    steps:
+      - checkout
+      - run: Set-Service wuauserv -StartupType Manual
+      - run: cinst neko --version 2.3.0 -y
+      - run: cinst haxe --version 4.1.5 -y
+      - run: RefreshEnv
+      - run: haxelib setup
+      - run: haxelib install lime 7.9.0
+      - run: RefreshEnv 
+      - run: haxelib install openfl 
+      - run: haxelib install flixel 
+      - run: haxelib run lime setup flixel 
+      - run: haxelib run lime setup 
+      - run: haxelib install flixel-tools
+      - run: haxelib install flixel-addons 
+      - run: haxelib install flixel-ui 
+      - run: haxelib install hscript 
+      - run: haxelib install newgrounds 
+      - run: haxelib install flixel-addons 
+      - run: haxelib git faxe https://github.com/uhrobots/faxe 
+      - run: haxelib git polymod https://github.com/larsiusprime/polymod.git 
+      - run: haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc 
+      - run: haxelib git extension-webm https://github.com/KadeDev/extension-webm 
+      - run: haxelib run lime rebuild extension-webm windows 
+      - run: haxelib install linc_luajit 
+      - run: haxelib install actuate 
+      - run: haxelib list
+  build:
+    executor: win/default
+    steps:
+      - checkout
+      - run: lime run windows
+workflows:
+  workflow-1:
+    jobs:
+      - install
+      - build
+  workflow-2:
+    jobs:
+      - install
+      - build
