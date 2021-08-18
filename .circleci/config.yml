@@ -41,8 +41,6 @@ workflows:
   workflow-1:
     jobs:
       - install
-      - build
   workflow-2:
     jobs:
-      - install
       - build
