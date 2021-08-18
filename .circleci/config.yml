@@ -13,7 +13,8 @@ jobs:
       - run: RefreshEnv 
       - run: haxelib setup C:/users/circleci/haxe 
       - run: haxelib install lime 7.9.0 
-      - run: RefreshEnv && haxelib install openfl 
+      - run: RefreshEnv 
+      - run: haxelib install openfl 
       - run: haxelib install flixel 
       - run: haxelib run lime setup flixel 
       - run: haxelib run lime setup 
