@@ -40,7 +40,10 @@ jobs:
 workflows:
   workflow-1:
     jobs:
-      - install
+      - install:
+        name: install
   workflow-2:
     jobs:
-      - build
+      - build:
+        name: build
+        require: [install]
