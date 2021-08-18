@@ -35,4 +35,4 @@ jobs:
 workflows:
   workflow:
     jobs:
-      - build:
+      - build
